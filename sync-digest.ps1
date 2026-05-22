@@ -6,7 +6,7 @@ $vault   = "C:\Users\neuy9\Documents\neuyvault"
 $digest  = "C:\Users\neuy9\Documents\neuyvault-digest"
 
 # Sync folders
-foreach ($folder in @("__MAIN", "Wiki")) {
+foreach ($folder in @("__MAIN", "Wiki", "Review", "Reference", "Non-Technical")) {
     $src  = Join-Path $vault   $folder
     $dest = Join-Path $digest  $folder
     robocopy $src $dest "*.md" /MIR /NJH /NJS /NFL /NDL | Out-Null
